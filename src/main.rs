@@ -25,6 +25,9 @@ fn main() -> Result<()> {
 
     let raw_data = data_fetcher::fetch_data(&config.app.data_url)?;
 
+    let fetched_in: std::time::Duration = start_time.elapsed();
+    info!("Travel Time data fetched successfully in {:.2?}", fetched_in);
+
     if raw_data.is_empty() {
         error!("No data fetched from the URL. Exiting.");
         return Ok(());
