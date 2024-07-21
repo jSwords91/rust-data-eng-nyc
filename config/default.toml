@@ -1,0 +1,6 @@
+[app]
+data_url = "https://raw.githubusercontent.com/jSwords91/effective-anomaly-detection-algorithm/main/data/TravelTime_451.csv"
+output_file = "daily_aggregates.csv"
+
+[anomaly_detection]
+iqr_multiplier = 1.5
